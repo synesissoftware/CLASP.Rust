@@ -19,7 +19,7 @@ checksum = "5b33a0644862185265eb4bee9b1679c1ae36f8258c000f3f482210acd95f7d70"
 
 [[package]]
 name = "clasp-rs"
-version = "0.0.0"
+version = "0.0.1"
 dependencies = [
  "test_help-rs",
 ]

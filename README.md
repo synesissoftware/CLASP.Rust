@@ -40,7 +40,7 @@ Command-Line Argument Sorting and Parsing (for Rust)
 
 ## Introduction
 
-**CLASP** stands for **C**ommand-**L**ine **A**rgument **S**orting and **P**arsing. **CLASP.Rust** is an unpublished empty scaffold with no supported public API. The reference implementation is the C/C++ [**CLASP**](https://github.com/synesissoftware/CLASP) library. The other implementations are listed under [Related projects](#related-projects).
+**CLASP** stands for **C**ommand-**L**ine **A**rgument **S**orting and **P**arsing. **CLASP.Rust** is an initial published scaffold with no supported public API. The reference implementation is the C/C++ [**CLASP**](https://github.com/synesissoftware/CLASP) library. The other implementations are listed under [Related projects](#related-projects).
 
 
 ## Developer Experience
@@ -61,7 +61,7 @@ cargo test
 Reference in **Cargo.toml** in the usual way:
 
 ```toml
-clasp-rs = { version = "0.0" }
+clasp-rs = { version = "0.0.1" }
 ```
 
 
