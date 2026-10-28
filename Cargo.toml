@@ -7,17 +7,46 @@
 authors = [
 	"Matt Wilson <matthew@synesis.com.au>",
 ]
+categories = [
+	"command-line-interface",
+]
 description = "Command-Line Argument Sorting and Parsing (for Rust)"
+documentation = "https://docs.rs/clasp-rs"
 edition = "2021"
-homepage = "https://github.com/synesissoftware/libpath.Rust"
+exclude = [
+	".cargo",
+	".cursor",
+	".github",
+	".vimrc",
+	".vscode",
+	"scripts",
+	"target",
+]
+homepage = "https://github.com/synesissoftware/CLASP.Rust"
+keywords = [
+	"cli",
+	"command-line",
+	"options",
+	"parsing",
+]
 license = "BSD-3-Clause"
 name = "clasp-rs"
 readme = "README.md"
+repository = "https://github.com/synesissoftware/CLASP.Rust"
+rust-version = "1.74"
 version = "0.0.0"
 
 
 # ##########################################################
 # Targets
+
+[lib]
+name = "clasp_rs"
+path = "src/lib.rs"
+
+[[example]]
+name = "versions"
+path = "examples/versions/main.rs"
 
 
 # ##########################################################
@@ -25,14 +54,33 @@ version = "0.0.0"
 
 [features]
 
+default = [
+]
+
+# General features:
+#
+# - "_NEVER_TO_BE_ENABLED" - this is a placeholder feature and must NEVER be specified;
+# - "null-feature" - a feature that has no effect (and, thus, is useful for simplifying driver scripts);
+
+_NEVER_TO_BE_ENABLED = []
+null-feature = []
+
+
+# Crate-specific features:
+#
+
 
 # ##########################################################
 # Dependencies
 
+[build-dependencies]
+
 [dependencies]
 
-
 [dev-dependencies]
+
+test_help-rs = { version = "0.2", default-features = false, features = [
+]}
 
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
