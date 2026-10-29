@@ -1,0 +1,98 @@
+{
+  "argv": [
+    "arg0",
+    "-f"
+  ],
+  "capabilities": [
+    "bit-flags"
+  ],
+  "checks": [
+    {
+      "mask": 7,
+      "operation": "check-all-matching-flags",
+      "result": 1
+    }
+  ],
+  "description": "Bit-flag combination for argv -f via clasp_checkAllMatchingFlags (flags0007). The unit test reparses before each call, so this case is one fresh parse.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": 0,
+        "givenHyphens": 1,
+        "givenName": "-f",
+        "originalIndex": 1,
+        "resolvedName": "-f",
+        "type": "flag",
+        "used": true,
+        "value": null
+      }
+    ],
+    "flags": [
+      0
+    ],
+    "options": [],
+    "programName": "arg0",
+    "status": "ok",
+    "unrecognised": [],
+    "unusedArguments": [],
+    "unusedFlags": [],
+    "unusedFlagsAndOptions": [],
+    "unusedOptions": [],
+    "unusedValues": [],
+    "values": []
+  },
+  "flags": [],
+  "id": "bit-flags.011",
+  "provenance": {
+    "kind": "unit-test",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65. The local in that test is flags0007.",
+    "path": "CLASP/CLASP/test/unit/parse/bit-flags/entry.c",
+    "symbol": "test_1_2"
+  },
+  "specifications": [
+    {
+      "alias": null,
+      "bitFlags": 1,
+      "help": "",
+      "mappedArgument": "-f",
+      "section": null,
+      "type": "flag",
+      "valueSet": null
+    },
+    {
+      "alias": null,
+      "bitFlags": 2,
+      "help": "",
+      "mappedArgument": "-g",
+      "section": null,
+      "type": "flag",
+      "valueSet": null
+    },
+    {
+      "alias": null,
+      "bitFlags": 4,
+      "help": "",
+      "mappedArgument": "-h",
+      "section": null,
+      "type": "flag",
+      "valueSet": null
+    },
+    {
+      "alias": null,
+      "bitFlags": 6,
+      "help": "",
+      "mappedArgument": "-i",
+      "section": null,
+      "type": "flag",
+      "valueSet": null
+    }
+  ],
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

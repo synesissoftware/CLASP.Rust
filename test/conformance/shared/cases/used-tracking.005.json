@@ -1,0 +1,104 @@
+{
+  "argv": [
+    "program",
+    "--verbose",
+    "file",
+    "other"
+  ],
+  "capabilities": [],
+  "checks": [
+    {
+      "index": 0,
+      "operation": "check-value",
+      "present": true,
+      "value": "file"
+    }
+  ],
+  "description": "clasp_checkValue marks the value at that value-partition index and does not mark flags.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": 0,
+        "givenHyphens": 2,
+        "givenName": "--verbose",
+        "originalIndex": 1,
+        "resolvedName": "--verbose",
+        "type": "flag",
+        "used": false,
+        "value": null
+      },
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 0,
+        "givenName": null,
+        "originalIndex": 2,
+        "resolvedName": null,
+        "type": "value",
+        "used": true,
+        "value": "file"
+      },
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 0,
+        "givenName": null,
+        "originalIndex": 3,
+        "resolvedName": null,
+        "type": "value",
+        "used": false,
+        "value": "other"
+      }
+    ],
+    "flags": [
+      0
+    ],
+    "options": [],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": [],
+    "unusedArguments": [
+      0,
+      2
+    ],
+    "unusedFlags": [
+      0
+    ],
+    "unusedFlagsAndOptions": [
+      0
+    ],
+    "unusedOptions": [],
+    "unusedValues": [
+      2
+    ],
+    "values": [
+      1,
+      2
+    ]
+  },
+  "flags": [],
+  "id": "used-tracking.005",
+  "provenance": {
+    "kind": "source",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65. The function returns non-zero when the index exists. The header retval comment is the other way around; this case follows the function body.",
+    "path": "CLASP/CLASP/src/clasp.api.c",
+    "symbol": "clasp_checkValue"
+  },
+  "specifications": [
+    {
+      "alias": "-v",
+      "bitFlags": 0,
+      "help": null,
+      "mappedArgument": "--verbose",
+      "section": null,
+      "type": "flag",
+      "valueSet": null
+    }
+  ],
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "argv": [
+    "program",
+    "--name",
+    "file"
+  ],
+  "capabilities": [],
+  "checks": [],
+  "description": "A specified long option whose alias name is non-empty consumes the next unrecognised argument as its value.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": 0,
+        "givenHyphens": 2,
+        "givenName": "--name",
+        "originalIndex": 1,
+        "resolvedName": "--name",
+        "type": "option",
+        "used": false,
+        "value": "file"
+      }
+    ],
+    "flags": [],
+    "options": [
+      0
+    ],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": [],
+    "unusedArguments": [
+      0
+    ],
+    "unusedFlags": [],
+    "unusedFlagsAndOptions": [
+      0
+    ],
+    "unusedOptions": [
+      0
+    ],
+    "unusedValues": [],
+    "values": []
+  },
+  "flags": [],
+  "id": "options.002",
+  "provenance": {
+    "kind": "readme",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65. README says the separate-argument option form requires specifications. The long-form condition is clasp.api.c: the specification name is non-empty, a next argument exists, and that argument is not itself recognised.",
+    "path": "CLASP/CLASP/README.md",
+    "symbol": null
+  },
+  "specifications": [
+    {
+      "alias": "-n",
+      "bitFlags": 0,
+      "help": "a name",
+      "mappedArgument": "--name",
+      "section": null,
+      "type": "option",
+      "valueSet": null
+    }
+  ],
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

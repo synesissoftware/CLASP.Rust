@@ -1,0 +1,76 @@
+{
+  "argv": [
+    "program",
+    "--verbose",
+    "--",
+    "--not-a-flag"
+  ],
+  "capabilities": [],
+  "checks": [],
+  "description": "A flag before -- stays a flag; a hyphen-leading token after -- is a value.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 2,
+        "givenName": "--verbose",
+        "originalIndex": 1,
+        "resolvedName": "--verbose",
+        "type": "flag",
+        "used": false,
+        "value": null
+      },
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 0,
+        "givenName": null,
+        "originalIndex": 3,
+        "resolvedName": null,
+        "type": "value",
+        "used": false,
+        "value": "--not-a-flag"
+      }
+    ],
+    "flags": [
+      0
+    ],
+    "options": [],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": null,
+    "unusedArguments": [
+      0,
+      1
+    ],
+    "unusedFlags": [
+      0
+    ],
+    "unusedFlagsAndOptions": [
+      0
+    ],
+    "unusedOptions": [],
+    "unusedValues": [
+      1
+    ],
+    "values": [
+      1
+    ]
+  },
+  "flags": [],
+  "id": "double-hyphen.002",
+  "provenance": {
+    "kind": "header",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65.",
+    "path": "CLASP/CLASP/include/clasp/clasp.h",
+    "symbol": "CLASP_F_DONT_RECOGNISE_DOUBLEHYPHEN_TO_START_VALUES"
+  },
+  "specifications": null,
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "argv": [
+    "program",
+    "-n=file",
+    "extra"
+  ],
+  "capabilities": [],
+  "checks": [],
+  "description": "A short option with an attached =value does not consume a further argument.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": 0,
+        "givenHyphens": 1,
+        "givenName": "-n",
+        "originalIndex": 1,
+        "resolvedName": "--name",
+        "type": "option",
+        "used": false,
+        "value": "file"
+      },
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 0,
+        "givenName": null,
+        "originalIndex": 2,
+        "resolvedName": null,
+        "type": "value",
+        "used": false,
+        "value": "extra"
+      }
+    ],
+    "flags": [],
+    "options": [
+      0
+    ],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": [],
+    "unusedArguments": [
+      0,
+      1
+    ],
+    "unusedFlags": [],
+    "unusedFlagsAndOptions": [
+      0
+    ],
+    "unusedOptions": [
+      0
+    ],
+    "unusedValues": [
+      1
+    ],
+    "values": [
+      1
+    ]
+  },
+  "flags": [],
+  "id": "options.009",
+  "provenance": {
+    "kind": "source",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65. The single-hyphen separator arm copies the attached value and does not set nextArgumentIsValue.",
+    "path": "CLASP/CLASP/src/clasp.api.c",
+    "symbol": "clasp_parseArguments_NoWild_"
+  },
+  "specifications": [
+    {
+      "alias": "-n",
+      "bitFlags": 0,
+      "help": "a name",
+      "mappedArgument": "--name",
+      "section": null,
+      "type": "option",
+      "valueSet": null
+    }
+  ],
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

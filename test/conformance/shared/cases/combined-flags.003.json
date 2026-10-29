@@ -1,0 +1,108 @@
+{
+  "argv": [
+    "program",
+    "-abc"
+  ],
+  "capabilities": [],
+  "checks": [],
+  "description": "When specifications are present, an unknown letter inside a combined token is still its own flag.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": 0,
+        "givenHyphens": 1,
+        "givenName": "-abc",
+        "originalIndex": 1,
+        "resolvedName": "--alpha",
+        "type": "flag",
+        "used": false,
+        "value": null
+      },
+      {
+        "aliasIndex": 1,
+        "givenHyphens": 1,
+        "givenName": "-abc",
+        "originalIndex": 1,
+        "resolvedName": "--gamma",
+        "type": "flag",
+        "used": false,
+        "value": null
+      },
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 1,
+        "givenName": "-abc",
+        "originalIndex": 1,
+        "resolvedName": "-b",
+        "type": "flag",
+        "used": false,
+        "value": null
+      }
+    ],
+    "flags": [
+      0,
+      1,
+      2
+    ],
+    "options": [],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": [
+      2
+    ],
+    "unusedArguments": [
+      0,
+      1,
+      2
+    ],
+    "unusedFlags": [
+      0,
+      1,
+      2
+    ],
+    "unusedFlagsAndOptions": [
+      0,
+      1,
+      2
+    ],
+    "unusedOptions": [],
+    "unusedValues": [],
+    "values": []
+  },
+  "flags": [],
+  "id": "combined-flags.003",
+  "provenance": {
+    "kind": "source",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65. Unknown letters are emitted in the per-letter else branch, clasp.api.c around the flag[3] loop.",
+    "path": "CLASP/CLASP/src/clasp.api.c",
+    "symbol": "clasp_parseArguments_NoWild_"
+  },
+  "specifications": [
+    {
+      "alias": "-a",
+      "bitFlags": 0,
+      "help": null,
+      "mappedArgument": "--alpha",
+      "section": null,
+      "type": "flag",
+      "valueSet": null
+    },
+    {
+      "alias": "-c",
+      "bitFlags": 0,
+      "help": null,
+      "mappedArgument": "--gamma",
+      "section": null,
+      "type": "flag",
+      "valueSet": null
+    }
+  ],
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

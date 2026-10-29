@@ -1,0 +1,95 @@
+{
+  "argv": [
+    "program",
+    "--name",
+    "--verbose"
+  ],
+  "capabilities": [],
+  "checks": [],
+  "description": "A long option does not consume a following argument that is itself a recognised flag or option.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": 1,
+        "givenHyphens": 2,
+        "givenName": "--verbose",
+        "originalIndex": 2,
+        "resolvedName": "--verbose",
+        "type": "flag",
+        "used": false,
+        "value": null
+      },
+      {
+        "aliasIndex": 0,
+        "givenHyphens": 2,
+        "givenName": "--name",
+        "originalIndex": 1,
+        "resolvedName": "--name",
+        "type": "option",
+        "used": false,
+        "value": null
+      }
+    ],
+    "flags": [
+      0
+    ],
+    "options": [
+      1
+    ],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": [],
+    "unusedArguments": [
+      0,
+      1
+    ],
+    "unusedFlags": [
+      0
+    ],
+    "unusedFlagsAndOptions": [
+      0,
+      1
+    ],
+    "unusedOptions": [
+      1
+    ],
+    "unusedValues": [],
+    "values": []
+  },
+  "flags": [],
+  "id": "options.006",
+  "provenance": {
+    "kind": "source",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65. The long-form next-argument test requires lookup of the next token to fail.",
+    "path": "CLASP/CLASP/src/clasp.api.c",
+    "symbol": "clasp_parseArguments_NoWild_"
+  },
+  "specifications": [
+    {
+      "alias": "-n",
+      "bitFlags": 0,
+      "help": "a name",
+      "mappedArgument": "--name",
+      "section": null,
+      "type": "option",
+      "valueSet": null
+    },
+    {
+      "alias": null,
+      "bitFlags": 0,
+      "help": null,
+      "mappedArgument": "--verbose",
+      "section": null,
+      "type": "flag",
+      "valueSet": null
+    }
+  ],
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

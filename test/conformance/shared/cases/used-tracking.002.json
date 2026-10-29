@@ -1,0 +1,86 @@
+{
+  "argv": [
+    "program",
+    "--verbose",
+    "file"
+  ],
+  "capabilities": [],
+  "checks": [
+    {
+      "name": "--verbose",
+      "operation": "flag-is-specified",
+      "result": true
+    }
+  ],
+  "description": "clasp_flagIsSpecified marks the first matching flag used and leaves values unused.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": 0,
+        "givenHyphens": 2,
+        "givenName": "--verbose",
+        "originalIndex": 1,
+        "resolvedName": "--verbose",
+        "type": "flag",
+        "used": true,
+        "value": null
+      },
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 0,
+        "givenName": null,
+        "originalIndex": 2,
+        "resolvedName": null,
+        "type": "value",
+        "used": false,
+        "value": "file"
+      }
+    ],
+    "flags": [
+      0
+    ],
+    "options": [],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": [],
+    "unusedArguments": [
+      1
+    ],
+    "unusedFlags": [],
+    "unusedFlagsAndOptions": [],
+    "unusedOptions": [],
+    "unusedValues": [
+      1
+    ],
+    "values": [
+      1
+    ]
+  },
+  "flags": [],
+  "id": "used-tracking.002",
+  "provenance": {
+    "kind": "source",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65. clasp_flagIsSpecified calls clasp_checkFlag, which calls clasp_useArgument on the first matching flag.",
+    "path": "CLASP/CLASP/src/clasp.api.c",
+    "symbol": "clasp_flagIsSpecified"
+  },
+  "specifications": [
+    {
+      "alias": "-v",
+      "bitFlags": 0,
+      "help": null,
+      "mappedArgument": "--verbose",
+      "section": null,
+      "type": "flag",
+      "valueSet": null
+    }
+  ],
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

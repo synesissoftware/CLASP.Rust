@@ -1,0 +1,28 @@
+{
+  "argv": [],
+  "capabilities": [],
+  "checks": [],
+  "description": "argc less than 1 is outside the clasp_parseArguments contract.",
+  "expected": {
+    "note": "clasp_parseArguments behaviour is undefined when argc is less than 1.",
+    "status": "undefined"
+  },
+  "flags": [],
+  "id": "edges.001",
+  "notes": "No result is invented. A port that defines empty-argv behaviour still does not satisfy this case; the C contract is undefined.",
+  "provenance": {
+    "kind": "header",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65. The header says behaviour is undefined if argc is less than 1.",
+    "path": "CLASP/CLASP/include/clasp/clasp.h",
+    "symbol": "clasp_parseArguments"
+  },
+  "specifications": null,
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

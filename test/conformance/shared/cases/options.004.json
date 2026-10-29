@@ -1,0 +1,84 @@
+{
+  "argv": [
+    "program",
+    "--name=one",
+    "--name=two"
+  ],
+  "capabilities": [],
+  "checks": [],
+  "description": "The same long option may occur more than once. Each occurrence is its own argument, in original-index order.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": 0,
+        "givenHyphens": 2,
+        "givenName": "--name",
+        "originalIndex": 1,
+        "resolvedName": "--name",
+        "type": "option",
+        "used": false,
+        "value": "one"
+      },
+      {
+        "aliasIndex": 0,
+        "givenHyphens": 2,
+        "givenName": "--name",
+        "originalIndex": 2,
+        "resolvedName": "--name",
+        "type": "option",
+        "used": false,
+        "value": "two"
+      }
+    ],
+    "flags": [],
+    "options": [
+      0,
+      1
+    ],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": [],
+    "unusedArguments": [
+      0,
+      1
+    ],
+    "unusedFlags": [],
+    "unusedFlagsAndOptions": [
+      0,
+      1
+    ],
+    "unusedOptions": [
+      0,
+      1
+    ],
+    "unusedValues": [],
+    "values": []
+  },
+  "flags": [],
+  "id": "options.004",
+  "provenance": {
+    "kind": "source",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65. Each argv element is classified independently. Sort is by type, then original index.",
+    "path": "CLASP/CLASP/src/clasp.api.c",
+    "symbol": "clasp_parseArguments_NoWild_"
+  },
+  "specifications": [
+    {
+      "alias": "-n",
+      "bitFlags": 0,
+      "help": "a name",
+      "mappedArgument": "--name",
+      "section": null,
+      "type": "option",
+      "valueSet": null
+    }
+  ],
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

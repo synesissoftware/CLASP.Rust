@@ -1,0 +1,93 @@
+{
+  "argv": [
+    "program",
+    "--verbose",
+    "--verbose"
+  ],
+  "capabilities": [],
+  "checks": [
+    {
+      "name": "--verbose",
+      "operation": "find-flag-or-option",
+      "result": {
+        "originalIndex": 1,
+        "resolvedName": "--verbose",
+        "type": "flag",
+        "value": null
+      },
+      "skip": 0
+    }
+  ],
+  "description": "findFlagOrOption with skip 0 marks only the first match.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": 0,
+        "givenHyphens": 2,
+        "givenName": "--verbose",
+        "originalIndex": 1,
+        "resolvedName": "--verbose",
+        "type": "flag",
+        "used": true,
+        "value": null
+      },
+      {
+        "aliasIndex": 0,
+        "givenHyphens": 2,
+        "givenName": "--verbose",
+        "originalIndex": 2,
+        "resolvedName": "--verbose",
+        "type": "flag",
+        "used": false,
+        "value": null
+      }
+    ],
+    "flags": [
+      0,
+      1
+    ],
+    "options": [],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": [],
+    "unusedArguments": [
+      1
+    ],
+    "unusedFlags": [
+      1
+    ],
+    "unusedFlagsAndOptions": [
+      1
+    ],
+    "unusedOptions": [],
+    "unusedValues": [],
+    "values": []
+  },
+  "flags": [],
+  "id": "used-tracking.004",
+  "provenance": {
+    "kind": "source",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65.",
+    "path": "CLASP/CLASP/src/clasp.api.c",
+    "symbol": "clasp_findFlagOrOption"
+  },
+  "specifications": [
+    {
+      "alias": "-v",
+      "bitFlags": 0,
+      "help": null,
+      "mappedArgument": "--verbose",
+      "section": null,
+      "type": "flag",
+      "valueSet": null
+    }
+  ],
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

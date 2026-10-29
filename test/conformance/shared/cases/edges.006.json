@@ -1,0 +1,60 @@
+{
+  "argv": [
+    "program",
+    "---verbose"
+  ],
+  "capabilities": [],
+  "checks": [],
+  "description": "An argument that begins with three hyphens is classified in the double-hyphen arm, and numGivenHyphens is stored as 2.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 2,
+        "givenName": "---verbose",
+        "originalIndex": 1,
+        "resolvedName": "---verbose",
+        "type": "flag",
+        "used": false,
+        "value": null
+      }
+    ],
+    "flags": [
+      0
+    ],
+    "options": [],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": null,
+    "unusedArguments": [
+      0
+    ],
+    "unusedFlags": [
+      0
+    ],
+    "unusedFlagsAndOptions": [
+      0
+    ],
+    "unusedOptions": [],
+    "unusedValues": [],
+    "values": []
+  },
+  "flags": [],
+  "id": "edges.006",
+  "notes": "The structure comment says numGivenHyphens is the number of hyphens in the original argument. The double-hyphen arm writes the constant 2. This case follows the assignment.",
+  "provenance": {
+    "kind": "source",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65. Any token whose second character is '-' takes the double-hyphen arm, which assigns numGivenHyphens = 2 rather than counting hyphens.",
+    "path": "CLASP/CLASP/src/clasp.api.c",
+    "symbol": "clasp_parseArguments_NoWild_"
+  },
+  "specifications": null,
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

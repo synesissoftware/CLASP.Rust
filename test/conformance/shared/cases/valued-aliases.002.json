@@ -1,0 +1,94 @@
+{
+  "argv": [
+    "program",
+    "-vx"
+  ],
+  "capabilities": [],
+  "checks": [],
+  "description": "A one-letter valued alias combines with a one-letter flag.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": 1,
+        "givenHyphens": 1,
+        "givenName": "-vx",
+        "originalIndex": 1,
+        "resolvedName": "--extract",
+        "type": "flag",
+        "used": false,
+        "value": null
+      },
+      {
+        "aliasIndex": 0,
+        "givenHyphens": 1,
+        "givenName": "-vx",
+        "originalIndex": 1,
+        "resolvedName": "--opt1",
+        "type": "option",
+        "used": false,
+        "value": "val1"
+      }
+    ],
+    "flags": [
+      0
+    ],
+    "options": [
+      1
+    ],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": [],
+    "unusedArguments": [
+      0,
+      1
+    ],
+    "unusedFlags": [
+      0
+    ],
+    "unusedFlagsAndOptions": [
+      0,
+      1
+    ],
+    "unusedOptions": [
+      1
+    ],
+    "unusedValues": [],
+    "values": []
+  },
+  "flags": [],
+  "id": "valued-aliases.002",
+  "provenance": {
+    "kind": "readme",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65. README: one-letter flag aliases combine, and a flag may alias an option that has a value. The per-letter loop copies the value out of the mapped argument when it contains a separator.",
+    "path": "CLASP/CLASP/README.md",
+    "symbol": null
+  },
+  "specifications": [
+    {
+      "alias": "-v",
+      "bitFlags": 0,
+      "help": null,
+      "mappedArgument": "--opt1=val1",
+      "section": null,
+      "type": "flag",
+      "valueSet": null
+    },
+    {
+      "alias": "-x",
+      "bitFlags": 0,
+      "help": null,
+      "mappedArgument": "--extract",
+      "section": null,
+      "type": "flag",
+      "valueSet": null
+    }
+  ],
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

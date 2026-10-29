@@ -1,0 +1,59 @@
+{
+  "argv": [
+    "program",
+    "--=value"
+  ],
+  "capabilities": [],
+  "checks": [],
+  "description": "The argument --=value is an option whose name is -- and whose value is value.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 2,
+        "givenName": "--",
+        "originalIndex": 1,
+        "resolvedName": "--",
+        "type": "option",
+        "used": false,
+        "value": "value"
+      }
+    ],
+    "flags": [],
+    "options": [
+      0
+    ],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": null,
+    "unusedArguments": [
+      0
+    ],
+    "unusedFlags": [],
+    "unusedFlagsAndOptions": [
+      0
+    ],
+    "unusedOptions": [
+      0
+    ],
+    "unusedValues": [],
+    "values": []
+  },
+  "flags": [],
+  "id": "edges.003",
+  "provenance": {
+    "kind": "source",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65. clasp_strchreq_ treats '=' and ':' as value separators. The name length stops at the separator, so the name is the two hyphens.",
+    "path": "CLASP/CLASP/src/clasp.api.c",
+    "symbol": "clasp_strchreq_"
+  },
+  "specifications": null,
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

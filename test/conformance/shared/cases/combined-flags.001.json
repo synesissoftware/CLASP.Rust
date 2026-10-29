@@ -1,0 +1,118 @@
+{
+  "argv": [
+    "program",
+    "-xpl"
+  ],
+  "capabilities": [],
+  "checks": [],
+  "description": "Combined single-letter aliases expand, and a mapped argument that contains '=' becomes an option. A literal specification of the combined form is absent, so the letters are split.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": 1,
+        "givenHyphens": 1,
+        "givenName": "-xpl",
+        "originalIndex": 1,
+        "resolvedName": "---include-all-patterns",
+        "type": "flag",
+        "used": false,
+        "value": null
+      },
+      {
+        "aliasIndex": 0,
+        "givenHyphens": 1,
+        "givenName": "-xpl",
+        "originalIndex": 1,
+        "resolvedName": "--extract",
+        "type": "flag",
+        "used": false,
+        "value": null
+      },
+      {
+        "aliasIndex": 2,
+        "givenHyphens": 1,
+        "givenName": "-xpl",
+        "originalIndex": 1,
+        "resolvedName": "--form",
+        "type": "option",
+        "used": false,
+        "value": "list"
+      }
+    ],
+    "flags": [
+      0,
+      1
+    ],
+    "options": [
+      2
+    ],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": [],
+    "unusedArguments": [
+      0,
+      1,
+      2
+    ],
+    "unusedFlags": [
+      0,
+      1
+    ],
+    "unusedFlagsAndOptions": [
+      0,
+      1,
+      2
+    ],
+    "unusedOptions": [
+      2
+    ],
+    "unusedValues": [],
+    "values": []
+  },
+  "flags": [],
+  "id": "combined-flags.001",
+  "notes": "Sort within one original index is resolved-name strncmp of the shorter length (clasp.api.c:256). These resolved names do not share a prefix, so the order is determined.",
+  "provenance": {
+    "kind": "readme",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65. README combined-flag example. Expansion is the per-letter loop in clasp.api.c when the whole token is not a specification.",
+    "path": "CLASP/CLASP/README.md",
+    "symbol": null
+  },
+  "specifications": [
+    {
+      "alias": "-x",
+      "bitFlags": 0,
+      "help": null,
+      "mappedArgument": "--extract",
+      "section": null,
+      "type": "flag",
+      "valueSet": null
+    },
+    {
+      "alias": "-p",
+      "bitFlags": 0,
+      "help": null,
+      "mappedArgument": "---include-all-patterns",
+      "section": null,
+      "type": "flag",
+      "valueSet": null
+    },
+    {
+      "alias": "-l",
+      "bitFlags": 0,
+      "help": null,
+      "mappedArgument": "--form=list",
+      "section": null,
+      "type": "flag",
+      "valueSet": null
+    }
+  ],
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

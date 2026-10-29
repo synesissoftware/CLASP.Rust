@@ -1,0 +1,66 @@
+{
+  "argv": [
+    "program",
+    "--verbosity"
+  ],
+  "capabilities": [],
+  "checks": [
+    {
+      "name": "--verbosity",
+      "operation": "find-flag-or-option",
+      "result": {
+        "originalIndex": 1,
+        "resolvedName": "--verbosity",
+        "type": "flag",
+        "value": null
+      },
+      "skip": 0
+    }
+  ],
+  "description": "A bare --verbosity is a flag. findFlagOrOption marks that flag used.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 2,
+        "givenName": "--verbosity",
+        "originalIndex": 1,
+        "resolvedName": "--verbosity",
+        "type": "flag",
+        "used": true,
+        "value": null
+      }
+    ],
+    "flags": [
+      0
+    ],
+    "options": [],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": null,
+    "unusedArguments": [],
+    "unusedFlags": [],
+    "unusedFlagsAndOptions": [],
+    "unusedOptions": [],
+    "unusedValues": [],
+    "values": []
+  },
+  "flags": [],
+  "id": "find-flag-or-option.002",
+  "notes": "The unit test asserts value.ptr equals \"\" via TEST_MS_EQ. The parser stores a NULL value pointer and a zero length for a flag. This case follows the parser (JSON null). The used bit is set by clasp_findFlagOrOption; the unit test does not assert it.",
+  "provenance": {
+    "kind": "unit-test",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65.",
+    "path": "CLASP/CLASP/test/unit/parse/findflagoroption/entry.c",
+    "symbol": "test_1_1"
+  },
+  "specifications": null,
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

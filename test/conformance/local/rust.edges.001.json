@@ -1,0 +1,31 @@
+{
+  "argv": [],
+  "capabilities": [],
+  "checks": [],
+  "description": "An empty argv, which the C contract leaves undefined, yields an empty program name and no arguments in CLASP.Rust.",
+  "expected": {
+    "arguments": [],
+    "flags": [],
+    "options": [],
+    "programName": "",
+    "status": "ok",
+    "unrecognised": null,
+    "unusedArguments": [],
+    "unusedFlags": [],
+    "unusedFlagsAndOptions": [],
+    "unusedOptions": [],
+    "unusedValues": [],
+    "values": []
+  },
+  "flags": [],
+  "id": "rust.edges.001",
+  "notes": "Candidate to contribute back to the shared corpus. The C function leaves argc less than 1 undefined, so this case is not an oracle result. It locks the Rust stand-in.",
+  "provenance": {
+    "kind": "header",
+    "note": "Rust-authored. Derived from include/clasp/clasp.h clasp_parseArguments, the precondition that argc must be 1 or more (around the retval lines and the note that argc less than 1 is undefined). CLASP.Rust returns an empty program name and no arguments instead of panicking.",
+    "path": "CLASP/CLASP/include/clasp/clasp.h",
+    "symbol": "clasp_parseArguments"
+  },
+  "specifications": null,
+  "verified": false
+}

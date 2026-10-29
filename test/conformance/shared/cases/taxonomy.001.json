@@ -1,0 +1,39 @@
+{
+  "argv": [
+    "program"
+  ],
+  "capabilities": [],
+  "checks": [],
+  "description": "argv that contains only the program name yields no arguments.",
+  "expected": {
+    "arguments": [],
+    "flags": [],
+    "options": [],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": null,
+    "unusedArguments": [],
+    "unusedFlags": [],
+    "unusedFlagsAndOptions": [],
+    "unusedOptions": [],
+    "unusedValues": [],
+    "values": []
+  },
+  "flags": [],
+  "id": "taxonomy.001",
+  "provenance": {
+    "kind": "unit-test",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65. Same argv shape as the empty findFlagOrOption test, without the query.",
+    "path": "CLASP/CLASP/test/unit/parse/findflagoroption/entry.c",
+    "symbol": "test_1_0"
+  },
+  "specifications": null,
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

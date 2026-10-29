@@ -1,0 +1,71 @@
+{
+  "argv": [
+    "program",
+    "--unknown=1"
+  ],
+  "capabilities": [],
+  "checks": [],
+  "description": "An option written with =value is unrecognised when its resolved name matches no specification.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 2,
+        "givenName": "--unknown",
+        "originalIndex": 1,
+        "resolvedName": "--unknown",
+        "type": "option",
+        "used": false,
+        "value": "1"
+      }
+    ],
+    "flags": [],
+    "options": [
+      0
+    ],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": [
+      0
+    ],
+    "unusedArguments": [
+      0
+    ],
+    "unusedFlags": [],
+    "unusedFlagsAndOptions": [
+      0
+    ],
+    "unusedOptions": [
+      0
+    ],
+    "unusedValues": [],
+    "values": []
+  },
+  "flags": [],
+  "id": "unknown.002",
+  "provenance": {
+    "kind": "source",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65.",
+    "path": "CLASP/CLASP/src/clasp.api.c",
+    "symbol": "clasp_reportUnrecognisedFlagsAndOptions"
+  },
+  "specifications": [
+    {
+      "alias": null,
+      "bitFlags": 0,
+      "help": null,
+      "mappedArgument": "--verbose",
+      "section": null,
+      "type": "flag",
+      "valueSet": null
+    }
+  ],
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}
