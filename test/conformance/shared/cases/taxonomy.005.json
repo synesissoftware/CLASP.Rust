@@ -1,0 +1,59 @@
+{
+  "argv": [
+    "program",
+    "--opt1=val1"
+  ],
+  "capabilities": [],
+  "checks": [],
+  "description": "An attached =value is an option even when no specifications are supplied.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 2,
+        "givenName": "--opt1",
+        "originalIndex": 1,
+        "resolvedName": "--opt1",
+        "type": "option",
+        "used": false,
+        "value": "val1"
+      }
+    ],
+    "flags": [],
+    "options": [
+      0
+    ],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": null,
+    "unusedArguments": [
+      0
+    ],
+    "unusedFlags": [],
+    "unusedFlagsAndOptions": [
+      0
+    ],
+    "unusedOptions": [
+      0
+    ],
+    "unusedValues": [],
+    "values": []
+  },
+  "flags": [],
+  "id": "taxonomy.005",
+  "provenance": {
+    "kind": "readme",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65. README option example --opt1=val1.",
+    "path": "CLASP/CLASP/README.md",
+    "symbol": null
+  },
+  "specifications": null,
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

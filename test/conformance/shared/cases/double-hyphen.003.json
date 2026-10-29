@@ -1,0 +1,78 @@
+{
+  "argv": [
+    "program",
+    "--",
+    "--file"
+  ],
+  "capabilities": [
+    "dont-recognise-doublehyphen"
+  ],
+  "checks": [],
+  "description": "With CLASP_F_DONT_RECOGNISE_DOUBLEHYPHEN_TO_START_VALUES, -- is an ordinary flag and later hyphen-leading tokens are not forced to values.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 2,
+        "givenName": "--",
+        "originalIndex": 1,
+        "resolvedName": "--",
+        "type": "flag",
+        "used": false,
+        "value": null
+      },
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 2,
+        "givenName": "--file",
+        "originalIndex": 2,
+        "resolvedName": "--file",
+        "type": "flag",
+        "used": false,
+        "value": null
+      }
+    ],
+    "flags": [
+      0,
+      1
+    ],
+    "options": [],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": null,
+    "unusedArguments": [
+      0,
+      1
+    ],
+    "unusedFlags": [
+      0,
+      1
+    ],
+    "unusedFlagsAndOptions": [
+      0,
+      1
+    ],
+    "unusedOptions": [],
+    "unusedValues": [],
+    "values": []
+  },
+  "flags": [
+    "CLASP_F_DONT_RECOGNISE_DOUBLEHYPHEN_TO_START_VALUES"
+  ],
+  "id": "double-hyphen.003",
+  "provenance": {
+    "kind": "header",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65. The special-case branch requires the flag bit to be clear, clasp.api.c.",
+    "path": "CLASP/CLASP/include/clasp/clasp.h",
+    "symbol": "CLASP_F_DONT_RECOGNISE_DOUBLEHYPHEN_TO_START_VALUES"
+  },
+  "specifications": null,
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

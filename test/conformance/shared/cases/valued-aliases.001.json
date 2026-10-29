@@ -1,0 +1,78 @@
+{
+  "argv": [
+    "program",
+    "-v1"
+  ],
+  "capabilities": [],
+  "checks": [],
+  "description": "The alias -v1 whose mapped argument is --opt1=val1 is one option.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": 1,
+        "givenHyphens": 1,
+        "givenName": "-v1",
+        "originalIndex": 1,
+        "resolvedName": "--opt1",
+        "type": "option",
+        "used": false,
+        "value": "val1"
+      }
+    ],
+    "flags": [],
+    "options": [
+      0
+    ],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": [],
+    "unusedArguments": [
+      0
+    ],
+    "unusedFlags": [],
+    "unusedFlagsAndOptions": [
+      0
+    ],
+    "unusedOptions": [
+      0
+    ],
+    "unusedValues": [],
+    "values": []
+  },
+  "flags": [],
+  "id": "valued-aliases.001",
+  "provenance": {
+    "kind": "readme",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65. The C README allows a flag alias whose mapped form contains a value, for example -R aliased to --recursive=no. The -v1 form is the same mechanism and is the form described by the other CLASP ports' READMEs. The C arm is the single-hyphen match whose mapped argument contains a separator.",
+    "path": "CLASP/CLASP/README.md",
+    "symbol": null
+  },
+  "specifications": [
+    {
+      "alias": null,
+      "bitFlags": 0,
+      "help": "an option",
+      "mappedArgument": "--opt1",
+      "section": null,
+      "type": "option",
+      "valueSet": null
+    },
+    {
+      "alias": "-v1",
+      "bitFlags": 0,
+      "help": null,
+      "mappedArgument": "--opt1=val1",
+      "section": null,
+      "type": "flag",
+      "valueSet": null
+    }
+  ],
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "argv": [
+    "program",
+    "--name=file"
+  ],
+  "capabilities": [],
+  "checks": [],
+  "description": "A specified long option with an attached =value keeps that value.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": 0,
+        "givenHyphens": 2,
+        "givenName": "--name",
+        "originalIndex": 1,
+        "resolvedName": "--name",
+        "type": "option",
+        "used": false,
+        "value": "file"
+      }
+    ],
+    "flags": [],
+    "options": [
+      0
+    ],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": [],
+    "unusedArguments": [
+      0
+    ],
+    "unusedFlags": [],
+    "unusedFlagsAndOptions": [
+      0
+    ],
+    "unusedOptions": [
+      0
+    ],
+    "unusedValues": [],
+    "values": []
+  },
+  "flags": [],
+  "id": "options.001",
+  "provenance": {
+    "kind": "readme",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65. README long-form option --name=value. The separator arm does not require a specification in order to detect an option; the specification supplies the resolved name.",
+    "path": "CLASP/CLASP/README.md",
+    "symbol": null
+  },
+  "specifications": [
+    {
+      "alias": "-n",
+      "bitFlags": 0,
+      "help": "a name",
+      "mappedArgument": "--name",
+      "section": null,
+      "type": "option",
+      "valueSet": null
+    }
+  ],
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

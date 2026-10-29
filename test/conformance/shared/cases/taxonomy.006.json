@@ -1,0 +1,106 @@
+{
+  "argv": [
+    "program",
+    "infile",
+    "--opt1=val1",
+    "--all",
+    "outfile"
+  ],
+  "capabilities": [],
+  "checks": [],
+  "description": "Flags, then options, then values, is the default argument order.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 2,
+        "givenName": "--all",
+        "originalIndex": 3,
+        "resolvedName": "--all",
+        "type": "flag",
+        "used": false,
+        "value": null
+      },
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 2,
+        "givenName": "--opt1",
+        "originalIndex": 2,
+        "resolvedName": "--opt1",
+        "type": "option",
+        "used": false,
+        "value": "val1"
+      },
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 0,
+        "givenName": null,
+        "originalIndex": 1,
+        "resolvedName": null,
+        "type": "value",
+        "used": false,
+        "value": "infile"
+      },
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 0,
+        "givenName": null,
+        "originalIndex": 4,
+        "resolvedName": null,
+        "type": "value",
+        "used": false,
+        "value": "outfile"
+      }
+    ],
+    "flags": [
+      0
+    ],
+    "options": [
+      1
+    ],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": null,
+    "unusedArguments": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "unusedFlags": [
+      0
+    ],
+    "unusedFlagsAndOptions": [
+      0,
+      1
+    ],
+    "unusedOptions": [
+      1
+    ],
+    "unusedValues": [
+      2,
+      3
+    ],
+    "values": [
+      2,
+      3
+    ]
+  },
+  "flags": [],
+  "id": "taxonomy.006",
+  "provenance": {
+    "kind": "source",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65. qsort orders flag before option before value, then by original index. Partitions are slices of that array.",
+    "path": "CLASP/CLASP/src/clasp.api.c",
+    "symbol": "compare_clasp_argument_t_"
+  },
+  "specifications": null,
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

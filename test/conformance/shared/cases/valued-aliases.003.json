@@ -1,0 +1,69 @@
+{
+  "argv": [
+    "program",
+    "-R"
+  ],
+  "capabilities": [],
+  "checks": [],
+  "description": "The alias -R maps to the option --recursive with value no.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": 0,
+        "givenHyphens": 1,
+        "givenName": "-R",
+        "originalIndex": 1,
+        "resolvedName": "--recursive",
+        "type": "option",
+        "used": false,
+        "value": "no"
+      }
+    ],
+    "flags": [],
+    "options": [
+      0
+    ],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": [],
+    "unusedArguments": [
+      0
+    ],
+    "unusedFlags": [],
+    "unusedFlagsAndOptions": [
+      0
+    ],
+    "unusedOptions": [
+      0
+    ],
+    "unusedValues": [],
+    "values": []
+  },
+  "flags": [],
+  "id": "valued-aliases.003",
+  "provenance": {
+    "kind": "header",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65. The clasp_argtype_t comment gives -R aliased to --recursive=no.",
+    "path": "CLASP/CLASP/include/clasp/clasp.h",
+    "symbol": "clasp_argtype_t"
+  },
+  "specifications": [
+    {
+      "alias": "-R",
+      "bitFlags": 0,
+      "help": null,
+      "mappedArgument": "--recursive=no",
+      "section": null,
+      "type": "flag",
+      "valueSet": null
+    }
+  ],
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

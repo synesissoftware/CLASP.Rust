@@ -1,0 +1,85 @@
+{
+  "argv": [
+    "program",
+    "-ab"
+  ],
+  "capabilities": [],
+  "checks": [],
+  "description": "Inside a combined token, known letters are recognised and unknown letters are not.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": 0,
+        "givenHyphens": 1,
+        "givenName": "-ab",
+        "originalIndex": 1,
+        "resolvedName": "--alpha",
+        "type": "flag",
+        "used": false,
+        "value": null
+      },
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 1,
+        "givenName": "-ab",
+        "originalIndex": 1,
+        "resolvedName": "-b",
+        "type": "flag",
+        "used": false,
+        "value": null
+      }
+    ],
+    "flags": [
+      0,
+      1
+    ],
+    "options": [],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": [
+      1
+    ],
+    "unusedArguments": [
+      0,
+      1
+    ],
+    "unusedFlags": [
+      0,
+      1
+    ],
+    "unusedFlagsAndOptions": [
+      0,
+      1
+    ],
+    "unusedOptions": [],
+    "unusedValues": [],
+    "values": []
+  },
+  "flags": [],
+  "id": "unknown.004",
+  "provenance": {
+    "kind": "source",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65.",
+    "path": "CLASP/CLASP/src/clasp.api.c",
+    "symbol": "clasp_reportUnrecognisedFlagsAndOptions"
+  },
+  "specifications": [
+    {
+      "alias": "-a",
+      "bitFlags": 0,
+      "help": null,
+      "mappedArgument": "--alpha",
+      "section": null,
+      "type": "flag",
+      "valueSet": null
+    }
+  ],
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

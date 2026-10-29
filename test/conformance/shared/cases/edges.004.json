@@ -1,0 +1,60 @@
+{
+  "argv": [
+    "program",
+    "--name="
+  ],
+  "capabilities": [],
+  "checks": [],
+  "description": "The argument --name= is an option with an empty-string value, which is distinct from an absent value.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 2,
+        "givenName": "--name",
+        "originalIndex": 1,
+        "resolvedName": "--name",
+        "type": "option",
+        "used": false,
+        "value": ""
+      }
+    ],
+    "flags": [],
+    "options": [
+      0
+    ],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": null,
+    "unusedArguments": [
+      0
+    ],
+    "unusedFlags": [],
+    "unusedFlagsAndOptions": [
+      0
+    ],
+    "unusedOptions": [
+      0
+    ],
+    "unusedValues": [],
+    "values": []
+  },
+  "flags": [],
+  "id": "edges.004",
+  "notes": "JSON null means the C value pointer is NULL (no value). JSON \"\" means a zero-length value was present.",
+  "provenance": {
+    "kind": "source",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65. A separator with nothing after it still takes the option arm and copies a zero-length value.",
+    "path": "CLASP/CLASP/src/clasp.api.c",
+    "symbol": "clasp_parseArguments_NoWild_"
+  },
+  "specifications": null,
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "argv": [
+    "program",
+    "-"
+  ],
+  "capabilities": [
+    "single-hyphen-as-value"
+  ],
+  "checks": [],
+  "description": "With CLASP_F_TREAT_SINGLEHYPHEN_AS_VALUE, a lone - is a value whose names and value are all -.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 1,
+        "givenName": "-",
+        "originalIndex": 1,
+        "resolvedName": "-",
+        "type": "value",
+        "used": false,
+        "value": "-"
+      }
+    ],
+    "flags": [],
+    "options": [],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": null,
+    "unusedArguments": [
+      0
+    ],
+    "unusedFlags": [],
+    "unusedFlagsAndOptions": [],
+    "unusedOptions": [],
+    "unusedValues": [
+      0
+    ],
+    "values": [
+      0
+    ]
+  },
+  "flags": [
+    "CLASP_F_TREAT_SINGLEHYPHEN_AS_VALUE"
+  ],
+  "id": "single-hyphen.002",
+  "provenance": {
+    "kind": "header",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65. The header says a transformed hyphen has non-empty resolvedName and givenName. clasp_valueIsTreatedHyphen is givenName.len != 0.",
+    "path": "CLASP/CLASP/include/clasp/clasp.h",
+    "symbol": "CLASP_F_TREAT_SINGLEHYPHEN_AS_VALUE"
+  },
+  "specifications": null,
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

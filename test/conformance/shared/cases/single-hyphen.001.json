@@ -1,0 +1,59 @@
+{
+  "argv": [
+    "program",
+    "-"
+  ],
+  "capabilities": [],
+  "checks": [],
+  "description": "By default, a lone - is a flag with resolved name -, given name -, and no value.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 1,
+        "givenName": "-",
+        "originalIndex": 1,
+        "resolvedName": "-",
+        "type": "flag",
+        "used": false,
+        "value": null
+      }
+    ],
+    "flags": [
+      0
+    ],
+    "options": [],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": null,
+    "unusedArguments": [
+      0
+    ],
+    "unusedFlags": [
+      0
+    ],
+    "unusedFlagsAndOptions": [
+      0
+    ],
+    "unusedOptions": [],
+    "unusedValues": [],
+    "values": []
+  },
+  "flags": [],
+  "id": "single-hyphen.001",
+  "provenance": {
+    "kind": "header",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65. The header says - is normally a flag or option. The parser classifies a one-character hyphen as a flag unless the flag is set.",
+    "path": "CLASP/CLASP/include/clasp/clasp.h",
+    "symbol": "CLASP_F_TREAT_SINGLEHYPHEN_AS_VALUE"
+  },
+  "specifications": null,
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

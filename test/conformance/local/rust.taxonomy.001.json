@@ -1,0 +1,72 @@
+{
+  "argv": [
+    "tool",
+    "-v"
+  ],
+  "capabilities": [],
+  "checks": [],
+  "description": "A section entry occupies an alias index, so the following flag is index 1.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": 1,
+        "givenHyphens": 1,
+        "givenName": "-v",
+        "originalIndex": 1,
+        "resolvedName": "--verbose",
+        "type": "flag",
+        "used": false,
+        "value": null
+      }
+    ],
+    "flags": [
+      0
+    ],
+    "options": [],
+    "programName": "tool",
+    "status": "ok",
+    "unrecognised": [],
+    "unusedArguments": [
+      0
+    ],
+    "unusedFlags": [
+      0
+    ],
+    "unusedFlagsAndOptions": [
+      0
+    ],
+    "unusedOptions": [],
+    "unusedValues": [],
+    "values": []
+  },
+  "flags": [],
+  "id": "rust.taxonomy.001",
+  "notes": "Candidate to contribute back to the shared corpus. The shared cases cover a gap in aliases.003 and do not cover a numbered section.",
+  "provenance": {
+    "kind": "source",
+    "note": "Rust-authored. Derived from src/clasp.api.c clasp_evaluate_spec_index_ (the specification pointer difference, so a non-argument entry occupies an index) and from the CLASP_SECTION macro in include/clasp/clasp.h.",
+    "path": "CLASP/CLASP/src/clasp.api.c",
+    "symbol": "clasp_evaluate_spec_index_"
+  },
+  "specifications": [
+    {
+      "alias": null,
+      "bitFlags": 0,
+      "help": null,
+      "mappedArgument": null,
+      "section": 1,
+      "type": "section",
+      "valueSet": null
+    },
+    {
+      "alias": "-v",
+      "bitFlags": 0,
+      "help": null,
+      "mappedArgument": "--verbose",
+      "section": null,
+      "type": "flag",
+      "valueSet": null
+    }
+  ],
+  "verified": false
+}

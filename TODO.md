@@ -11,7 +11,9 @@
 ## Functional improvements
 
 * [ ] Conformance table against the other **CLASP** implementations;
-* [ ] Parser core;
+* [ ] Contribute local conformance cases back to the shared corpus;
+* [x] ~~~Parser core~~~ - ✅;
+* [ ] Typed values, ranges, defaults, and required options;
 * [ ] Usage and version generation;
 * [ ] Wiring into **libCLImate.Rust**;
 
@@ -23,7 +25,7 @@
 
 ## Packaging improvements
 
-* \<none>
+* [ ] CI wiring and a corpus-refresh policy for the shared snapshot;
 
 
 <!-- ########################### end of file ########################### -->

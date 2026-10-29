@@ -1,0 +1,64 @@
+{
+  "argv": [
+    "program",
+    "file"
+  ],
+  "capabilities": [],
+  "checks": [
+    {
+      "index": 1,
+      "operation": "check-value",
+      "present": false,
+      "value": null
+    }
+  ],
+  "description": "clasp_checkValue past the last value reports the value as absent and marks nothing.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 0,
+        "givenName": null,
+        "originalIndex": 1,
+        "resolvedName": null,
+        "type": "value",
+        "used": false,
+        "value": "file"
+      }
+    ],
+    "flags": [],
+    "options": [],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": null,
+    "unusedArguments": [
+      0
+    ],
+    "unusedFlags": [],
+    "unusedFlagsAndOptions": [],
+    "unusedOptions": [],
+    "unusedValues": [
+      0
+    ],
+    "values": [
+      0
+    ]
+  },
+  "flags": [],
+  "id": "used-tracking.008",
+  "provenance": {
+    "kind": "source",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65.",
+    "path": "CLASP/CLASP/src/clasp.api.c",
+    "symbol": "clasp_checkValue"
+  },
+  "specifications": null,
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

@@ -21,6 +21,8 @@ exclude = [
 	".vscode",
 	"scripts",
 	"target",
+	"test/conformance/local",
+	"test/conformance/shared",
 ]
 homepage = "https://github.com/synesissoftware/CLASP.Rust"
 keywords = [
@@ -34,7 +36,7 @@ name = "clasp-rs"
 readme = "README.md"
 repository = "https://github.com/synesissoftware/CLASP.Rust"
 rust-version = "1.74"
-version = "0.0.1"
+version = "0.1.0"
 
 
 # ##########################################################
@@ -45,8 +47,20 @@ name = "clasp_rs"
 path = "src/lib.rs"
 
 [[example]]
+name = "minimal-usage"
+path = "examples/minimal-usage/main.rs"
+
+[[example]]
 name = "versions"
 path = "examples/versions/main.rs"
+
+[[test]]
+name = "conformance"
+path = "test/conformance/main.rs"
+
+[[test]]
+name = "unit"
+path = "test/unit/main.rs"
 
 
 # ##########################################################
@@ -77,10 +91,20 @@ null-feature = []
 
 [dependencies]
 
+base-traits = { version = "0.2", default-features = false, features = [
+]}
+
+
 [dev-dependencies]
 
+serde_json = { version = "1", default-features = false, features = [
+	"std",
+]}
 test_help-rs = { version = "0.2", default-features = false, features = [
 ]}
+woad = { version = "0", default-features = false, features = [
+]}
+
 
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html

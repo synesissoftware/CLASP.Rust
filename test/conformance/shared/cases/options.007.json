@@ -1,0 +1,80 @@
+{
+  "argv": [
+    "program",
+    "-n",
+    "--verbose"
+  ],
+  "capabilities": [],
+  "checks": [],
+  "description": "A short option consumes the next argument even when that argument is a recognised flag.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": 0,
+        "givenHyphens": 1,
+        "givenName": "-n",
+        "originalIndex": 1,
+        "resolvedName": "--name",
+        "type": "option",
+        "used": false,
+        "value": "--verbose"
+      }
+    ],
+    "flags": [],
+    "options": [
+      0
+    ],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": [],
+    "unusedArguments": [
+      0
+    ],
+    "unusedFlags": [],
+    "unusedFlagsAndOptions": [
+      0
+    ],
+    "unusedOptions": [
+      0
+    ],
+    "unusedValues": [],
+    "values": []
+  },
+  "flags": [],
+  "id": "options.007",
+  "notes": "This differs from the long-form rule in options.006. The header does not spell out the asymmetry. The case follows the two arms of the parser.",
+  "provenance": {
+    "kind": "source",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65. The single-hyphen specification match sets nextArgumentIsValue from the specification type alone.",
+    "path": "CLASP/CLASP/src/clasp.api.c",
+    "symbol": "clasp_parseArguments_NoWild_"
+  },
+  "specifications": [
+    {
+      "alias": "-n",
+      "bitFlags": 0,
+      "help": "a name",
+      "mappedArgument": "--name",
+      "section": null,
+      "type": "option",
+      "valueSet": null
+    },
+    {
+      "alias": null,
+      "bitFlags": 0,
+      "help": null,
+      "mappedArgument": "--verbose",
+      "section": null,
+      "type": "flag",
+      "valueSet": null
+    }
+  ],
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

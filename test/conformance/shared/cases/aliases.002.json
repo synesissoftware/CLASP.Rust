@@ -1,0 +1,84 @@
+{
+  "argv": [
+    "program",
+    "-v",
+    "--verbose"
+  ],
+  "capabilities": [],
+  "checks": [],
+  "description": "The alias and the mapped name are separate flag arguments with the same resolved name.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": 0,
+        "givenHyphens": 1,
+        "givenName": "-v",
+        "originalIndex": 1,
+        "resolvedName": "--verbose",
+        "type": "flag",
+        "used": false,
+        "value": null
+      },
+      {
+        "aliasIndex": 0,
+        "givenHyphens": 2,
+        "givenName": "--verbose",
+        "originalIndex": 2,
+        "resolvedName": "--verbose",
+        "type": "flag",
+        "used": false,
+        "value": null
+      }
+    ],
+    "flags": [
+      0,
+      1
+    ],
+    "options": [],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": [],
+    "unusedArguments": [
+      0,
+      1
+    ],
+    "unusedFlags": [
+      0,
+      1
+    ],
+    "unusedFlagsAndOptions": [
+      0,
+      1
+    ],
+    "unusedOptions": [],
+    "unusedValues": [],
+    "values": []
+  },
+  "flags": [],
+  "id": "aliases.002",
+  "provenance": {
+    "kind": "source",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65. Name search then mapped-argument search, clasp.api.c:427.",
+    "path": "CLASP/CLASP/src/clasp.api.c",
+    "symbol": "clasp_lookup_spec_for_name_"
+  },
+  "specifications": [
+    {
+      "alias": "-v",
+      "bitFlags": 0,
+      "help": null,
+      "mappedArgument": "--verbose",
+      "section": null,
+      "type": "flag",
+      "valueSet": null
+    }
+  ],
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

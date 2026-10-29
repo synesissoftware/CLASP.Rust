@@ -1,0 +1,77 @@
+{
+  "argv": [
+    "program",
+    "-ab"
+  ],
+  "capabilities": [],
+  "checks": [],
+  "description": "An empty specification array is not NULL, so a multi-letter short token is split into unknown flags.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 1,
+        "givenName": "-ab",
+        "originalIndex": 1,
+        "resolvedName": "-a",
+        "type": "flag",
+        "used": false,
+        "value": null
+      },
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 1,
+        "givenName": "-ab",
+        "originalIndex": 1,
+        "resolvedName": "-b",
+        "type": "flag",
+        "used": false,
+        "value": null
+      }
+    ],
+    "flags": [
+      0,
+      1
+    ],
+    "options": [],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": [
+      0,
+      1
+    ],
+    "unusedArguments": [
+      0,
+      1
+    ],
+    "unusedFlags": [
+      0,
+      1
+    ],
+    "unusedFlagsAndOptions": [
+      0,
+      1
+    ],
+    "unusedOptions": [],
+    "unusedValues": [],
+    "values": []
+  },
+  "flags": [],
+  "id": "combined-flags.005",
+  "notes": "NULL and an empty array are different inputs. The header allows a NULL specifications pointer. It does not discuss a terminator-only array.",
+  "provenance": {
+    "kind": "source",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65. The split loop is the else of the NULL-specifications test. An array that contains only the terminator is a non-NULL pointer.",
+    "path": "CLASP/CLASP/src/clasp.api.c",
+    "symbol": "clasp_parseArguments_NoWild_"
+  },
+  "specifications": [],
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

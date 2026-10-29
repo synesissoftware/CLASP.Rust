@@ -1,0 +1,471 @@
+{
+  "$defs": {
+    "argument": {
+      "additionalProperties": false,
+      "properties": {
+        "aliasIndex": {
+          "type": "integer"
+        },
+        "givenHyphens": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "givenName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "originalIndex": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "resolvedName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "type": {
+          "$ref": "#/$defs/argumentType"
+        },
+        "used": {
+          "type": "boolean"
+        },
+        "value": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "aliasIndex",
+        "givenHyphens",
+        "givenName",
+        "originalIndex",
+        "resolvedName",
+        "type",
+        "used",
+        "value"
+      ],
+      "type": "object"
+    },
+    "argumentType": {
+      "enum": [
+        "flag",
+        "option",
+        "value"
+      ],
+      "type": "string"
+    },
+    "capability": {
+      "enum": [
+        "bit-flags",
+        "dont-recognise-doublehyphen",
+        "preserve-original-order",
+        "single-hyphen-as-value",
+        "wildcards-apostrophe-quotes-windows",
+        "wildcards-windows"
+      ],
+      "type": "string"
+    },
+    "check": {
+      "properties": {
+        "index": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "mask": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "operation": {
+          "$ref": "#/$defs/operation"
+        },
+        "present": {
+          "type": "boolean"
+        },
+        "result": {},
+        "skip": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "specifications": {
+          "type": "array"
+        },
+        "value": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "operation"
+      ],
+      "type": "object"
+    },
+    "expectedOk": {
+      "additionalProperties": false,
+      "properties": {
+        "arguments": {
+          "items": {
+            "$ref": "#/$defs/argument"
+          },
+          "type": "array"
+        },
+        "flags": {
+          "$ref": "#/$defs/indexList"
+        },
+        "options": {
+          "$ref": "#/$defs/indexList"
+        },
+        "programName": {
+          "type": "string"
+        },
+        "status": {
+          "const": "ok",
+          "type": "string"
+        },
+        "unrecognised": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/indexList"
+            }
+          ]
+        },
+        "unusedArguments": {
+          "$ref": "#/$defs/indexList"
+        },
+        "unusedFlags": {
+          "$ref": "#/$defs/indexList"
+        },
+        "unusedFlagsAndOptions": {
+          "$ref": "#/$defs/indexList"
+        },
+        "unusedOptions": {
+          "$ref": "#/$defs/indexList"
+        },
+        "unusedValues": {
+          "$ref": "#/$defs/indexList"
+        },
+        "values": {
+          "$ref": "#/$defs/indexList"
+        }
+      },
+      "required": [
+        "arguments",
+        "flags",
+        "options",
+        "programName",
+        "status",
+        "unrecognised",
+        "unusedArguments",
+        "unusedFlags",
+        "unusedFlagsAndOptions",
+        "unusedOptions",
+        "unusedValues",
+        "values"
+      ],
+      "type": "object"
+    },
+    "expectedUndefined": {
+      "additionalProperties": false,
+      "properties": {
+        "note": {
+          "type": "string"
+        },
+        "status": {
+          "const": "undefined",
+          "type": "string"
+        }
+      },
+      "required": [
+        "note",
+        "status"
+      ],
+      "type": "object"
+    },
+    "indexList": {
+      "items": {
+        "minimum": 0,
+        "type": "integer"
+      },
+      "type": "array"
+    },
+    "operation": {
+      "enum": [
+        "check-all-flags",
+        "check-all-matching-flags",
+        "check-value",
+        "find-flag-or-option",
+        "flag-is-specified",
+        "report-unrecognised-flags-and-options",
+        "report-unused-arguments",
+        "report-unused-flags",
+        "report-unused-flags-and-options",
+        "report-unused-options",
+        "report-unused-values"
+      ],
+      "type": "string"
+    },
+    "parseFlag": {
+      "enum": [
+        "CLASP_F_DONT_EXPAND_WILDCARDS_ON_WINDOWS",
+        "CLASP_F_DONT_RECOGNISE_DOUBLEHYPHEN_TO_START_VALUES",
+        "CLASP_F_DO_EXPAND_WILDCARDS_IN_APOSQUOTES_ON_WINDOWS",
+        "CLASP_F_PRESERVE_ORIGINAL_ARGUMENT_ORDER",
+        "CLASP_F_TREAT_SINGLEHYPHEN_AS_VALUE"
+      ],
+      "type": "string"
+    },
+    "provenance": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "header",
+            "readme",
+            "source",
+            "unit-test"
+          ],
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
+        "path": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "symbol": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "note",
+        "path",
+        "symbol"
+      ],
+      "type": "object"
+    },
+    "specification": {
+      "additionalProperties": false,
+      "properties": {
+        "alias": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "bitFlags": {
+          "type": "integer"
+        },
+        "help": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "mappedArgument": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "section": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "type": {
+          "$ref": "#/$defs/specificationType"
+        },
+        "valueSet": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "alias",
+        "bitFlags",
+        "help",
+        "mappedArgument",
+        "section",
+        "type",
+        "valueSet"
+      ],
+      "type": "object"
+    },
+    "specificationType": {
+      "enum": [
+        "flag",
+        "gap",
+        "option",
+        "section",
+        "tacit"
+      ],
+      "type": "string"
+    },
+    "verifiedAgainst": {
+      "additionalProperties": false,
+      "properties": {
+        "language": {
+          "const": "C",
+          "type": "string"
+        },
+        "macro": {
+          "const": "CLASP_VER",
+          "type": "string"
+        },
+        "packed": {
+          "pattern": "^0x[0-9a-f]{8}$",
+          "type": "string"
+        },
+        "revision": {
+          "pattern": "^[0-9a-f]{40}$",
+          "type": "string"
+        },
+        "version": {
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "language",
+        "macro",
+        "packed",
+        "revision",
+        "version"
+      ],
+      "type": "object"
+    }
+  },
+  "$id": "https://synesissoftware.com/clasp-conformance/schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "else": {
+        "not": {
+          "required": [
+            "verifiedAgainst"
+          ]
+        }
+      },
+      "if": {
+        "properties": {
+          "verified": {
+            "const": true
+          }
+        },
+        "required": [
+          "verified"
+        ]
+      },
+      "then": {
+        "required": [
+          "verifiedAgainst"
+        ]
+      }
+    }
+  ],
+  "description": "One CLASP conformance case. Version 1 covers parsing and used-tracking only.",
+  "properties": {
+    "argv": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "capabilities": {
+      "items": {
+        "$ref": "#/$defs/capability"
+      },
+      "type": "array"
+    },
+    "checks": {
+      "items": {
+        "$ref": "#/$defs/check"
+      },
+      "type": "array"
+    },
+    "description": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "expected": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/expectedOk"
+        },
+        {
+          "$ref": "#/$defs/expectedUndefined"
+        }
+      ]
+    },
+    "flags": {
+      "items": {
+        "$ref": "#/$defs/parseFlag"
+      },
+      "type": "array"
+    },
+    "id": {
+      "pattern": "^[a-z0-9-]+\\.[0-9]{3}$",
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "provenance": {
+      "$ref": "#/$defs/provenance"
+    },
+    "specifications": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "items": {
+            "$ref": "#/$defs/specification"
+          },
+          "type": "array"
+        }
+      ]
+    },
+    "verified": {
+      "type": "boolean"
+    },
+    "verifiedAgainst": {
+      "$ref": "#/$defs/verifiedAgainst"
+    }
+  },
+  "required": [
+    "argv",
+    "capabilities",
+    "checks",
+    "description",
+    "expected",
+    "flags",
+    "id",
+    "provenance",
+    "specifications",
+    "verified"
+  ],
+  "title": "CLASP conformance case",
+  "type": "object",
+  "x-corpus-version": "1"
+}

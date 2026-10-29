@@ -1,0 +1,112 @@
+{
+  "argv": [
+    "program",
+    "--verbose",
+    "--quiet",
+    "file"
+  ],
+  "capabilities": [],
+  "checks": [
+    {
+      "name": "--verbose",
+      "operation": "flag-is-specified",
+      "result": true
+    }
+  ],
+  "description": "After marking one flag, the other flag and the value remain unused.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": 0,
+        "givenHyphens": 2,
+        "givenName": "--verbose",
+        "originalIndex": 1,
+        "resolvedName": "--verbose",
+        "type": "flag",
+        "used": true,
+        "value": null
+      },
+      {
+        "aliasIndex": 1,
+        "givenHyphens": 2,
+        "givenName": "--quiet",
+        "originalIndex": 2,
+        "resolvedName": "--quiet",
+        "type": "flag",
+        "used": false,
+        "value": null
+      },
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 0,
+        "givenName": null,
+        "originalIndex": 3,
+        "resolvedName": null,
+        "type": "value",
+        "used": false,
+        "value": "file"
+      }
+    ],
+    "flags": [
+      0,
+      1
+    ],
+    "options": [],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": [],
+    "unusedArguments": [
+      1,
+      2
+    ],
+    "unusedFlags": [
+      1
+    ],
+    "unusedFlagsAndOptions": [
+      1
+    ],
+    "unusedOptions": [],
+    "unusedValues": [
+      2
+    ],
+    "values": [
+      2
+    ]
+  },
+  "flags": [],
+  "id": "used-tracking.007",
+  "provenance": {
+    "kind": "source",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65.",
+    "path": "CLASP/CLASP/src/clasp.api.c",
+    "symbol": "clasp_reportUnusedFlagsAndOptions"
+  },
+  "specifications": [
+    {
+      "alias": "-v",
+      "bitFlags": 0,
+      "help": null,
+      "mappedArgument": "--verbose",
+      "section": null,
+      "type": "flag",
+      "valueSet": null
+    },
+    {
+      "alias": "-q",
+      "bitFlags": 0,
+      "help": null,
+      "mappedArgument": "--quiet",
+      "section": null,
+      "type": "flag",
+      "valueSet": null
+    }
+  ],
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

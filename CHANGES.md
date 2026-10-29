@@ -1,6 +1,13 @@
 # CLASP.Rust - Changes <!-- omit in toc -->
 
 
+## 0.1.0 - 28th October 2026
+
+* added the parse core (`parse`, specifications, arguments, and used-tracking queries) with an empty `[dependencies]` table;
+* added the in-tree conformance snapshot, local cases, **scripts/sync_conformance.sh**, and the conformance runner;
+* added the **minimal-usage** example and the conformance notes in **README.md**;
+
+
 ## 0.0.1 - 28th October 2026
 
 * added the initial **CLASP.Rust** crate and Cargo package metadata;

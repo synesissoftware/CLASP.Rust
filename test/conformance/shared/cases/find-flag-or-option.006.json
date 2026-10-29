@@ -1,0 +1,130 @@
+{
+  "argv": [
+    "program",
+    "--verbosity=abc",
+    "--blank",
+    "--verbosity=def",
+    "--blank",
+    "--verbosity=ghi"
+  ],
+  "capabilities": [],
+  "checks": [
+    {
+      "name": "--verbosity",
+      "operation": "find-flag-or-option",
+      "result": {
+        "originalIndex": 3,
+        "resolvedName": "--verbosity",
+        "type": "option",
+        "value": "def"
+      },
+      "skip": 1
+    }
+  ],
+  "description": "findFlagOrOption skips one --verbosity option and returns the next, ignoring intervening flags of another name.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 2,
+        "givenName": "--blank",
+        "originalIndex": 2,
+        "resolvedName": "--blank",
+        "type": "flag",
+        "used": false,
+        "value": null
+      },
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 2,
+        "givenName": "--blank",
+        "originalIndex": 4,
+        "resolvedName": "--blank",
+        "type": "flag",
+        "used": false,
+        "value": null
+      },
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 2,
+        "givenName": "--verbosity",
+        "originalIndex": 1,
+        "resolvedName": "--verbosity",
+        "type": "option",
+        "used": false,
+        "value": "abc"
+      },
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 2,
+        "givenName": "--verbosity",
+        "originalIndex": 3,
+        "resolvedName": "--verbosity",
+        "type": "option",
+        "used": true,
+        "value": "def"
+      },
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 2,
+        "givenName": "--verbosity",
+        "originalIndex": 5,
+        "resolvedName": "--verbosity",
+        "type": "option",
+        "used": false,
+        "value": "ghi"
+      }
+    ],
+    "flags": [
+      0,
+      1
+    ],
+    "options": [
+      2,
+      3,
+      4
+    ],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": null,
+    "unusedArguments": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "unusedFlags": [
+      0,
+      1
+    ],
+    "unusedFlagsAndOptions": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "unusedOptions": [
+      2,
+      4
+    ],
+    "unusedValues": [],
+    "values": []
+  },
+  "flags": [],
+  "id": "find-flag-or-option.006",
+  "provenance": {
+    "kind": "unit-test",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65.",
+    "path": "CLASP/CLASP/test/unit/parse/findflagoroption/entry.c",
+    "symbol": "test_1_5"
+  },
+  "specifications": null,
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

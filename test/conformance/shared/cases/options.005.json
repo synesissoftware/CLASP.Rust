@@ -1,0 +1,75 @@
+{
+  "argv": [
+    "program",
+    "--name",
+    "file"
+  ],
+  "capabilities": [],
+  "checks": [],
+  "description": "Without specifications, --name is a flag and the following word is a separate value.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 2,
+        "givenName": "--name",
+        "originalIndex": 1,
+        "resolvedName": "--name",
+        "type": "flag",
+        "used": false,
+        "value": null
+      },
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 0,
+        "givenName": null,
+        "originalIndex": 2,
+        "resolvedName": null,
+        "type": "value",
+        "used": false,
+        "value": "file"
+      }
+    ],
+    "flags": [
+      0
+    ],
+    "options": [],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": null,
+    "unusedArguments": [
+      0,
+      1
+    ],
+    "unusedFlags": [
+      0
+    ],
+    "unusedFlagsAndOptions": [
+      0
+    ],
+    "unusedOptions": [],
+    "unusedValues": [
+      1
+    ],
+    "values": [
+      1
+    ]
+  },
+  "flags": [],
+  "id": "options.005",
+  "provenance": {
+    "kind": "readme",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65. README: the separate-argument option form requires specifications.",
+    "path": "CLASP/CLASP/README.md",
+    "symbol": null
+  },
+  "specifications": null,
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

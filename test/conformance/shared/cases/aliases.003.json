@@ -1,0 +1,79 @@
+{
+  "argv": [
+    "program",
+    "-v"
+  ],
+  "capabilities": [],
+  "checks": [],
+  "description": "A gap section occupies a specification index, so the following flag's aliasIndex is 1.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": 1,
+        "givenHyphens": 1,
+        "givenName": "-v",
+        "originalIndex": 1,
+        "resolvedName": "--verbose",
+        "type": "flag",
+        "used": false,
+        "value": null
+      }
+    ],
+    "flags": [
+      0
+    ],
+    "options": [],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": [],
+    "unusedArguments": [
+      0
+    ],
+    "unusedFlags": [
+      0
+    ],
+    "unusedFlagsAndOptions": [
+      0
+    ],
+    "unusedOptions": [],
+    "unusedValues": [],
+    "values": []
+  },
+  "flags": [],
+  "id": "aliases.003",
+  "notes": "Gap sections are not arguments. They still count toward aliasIndex.",
+  "provenance": {
+    "kind": "source",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65. aliasIndex is the specification pointer difference, clasp.api.c:169.",
+    "path": "CLASP/CLASP/src/clasp.api.c",
+    "symbol": "clasp_evaluate_spec_index_"
+  },
+  "specifications": [
+    {
+      "alias": null,
+      "bitFlags": 0,
+      "help": "standard flags:",
+      "mappedArgument": null,
+      "section": null,
+      "type": "gap",
+      "valueSet": null
+    },
+    {
+      "alias": "-v",
+      "bitFlags": 0,
+      "help": null,
+      "mappedArgument": "--verbose",
+      "section": null,
+      "type": "flag",
+      "valueSet": null
+    }
+  ],
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}

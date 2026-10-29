@@ -1,0 +1,71 @@
+{
+  "argv": [
+    "program",
+    "-x"
+  ],
+  "capabilities": [],
+  "checks": [],
+  "description": "A single unknown letter, when any specifications are present, is an unrecognised flag.",
+  "expected": {
+    "arguments": [
+      {
+        "aliasIndex": -1,
+        "givenHyphens": 1,
+        "givenName": "-x",
+        "originalIndex": 1,
+        "resolvedName": "-x",
+        "type": "flag",
+        "used": false,
+        "value": null
+      }
+    ],
+    "flags": [
+      0
+    ],
+    "options": [],
+    "programName": "program",
+    "status": "ok",
+    "unrecognised": [
+      0
+    ],
+    "unusedArguments": [
+      0
+    ],
+    "unusedFlags": [
+      0
+    ],
+    "unusedFlagsAndOptions": [
+      0
+    ],
+    "unusedOptions": [],
+    "unusedValues": [],
+    "values": []
+  },
+  "flags": [],
+  "id": "unknown.003",
+  "provenance": {
+    "kind": "source",
+    "note": "Compared with CLASP 0.16.0.67 (CLASP_VER = 0x00100043) at revision 0afd4611372a94b6441e593ef57fa8d4b1306c65. The whole token -x does not match, so the per-letter loop emits -x.",
+    "path": "CLASP/CLASP/src/clasp.api.c",
+    "symbol": "clasp_parseArguments_NoWild_"
+  },
+  "specifications": [
+    {
+      "alias": "-v",
+      "bitFlags": 0,
+      "help": null,
+      "mappedArgument": "--verbose",
+      "section": null,
+      "type": "flag",
+      "valueSet": null
+    }
+  ],
+  "verified": true,
+  "verifiedAgainst": {
+    "language": "C",
+    "macro": "CLASP_VER",
+    "packed": "0x00100043",
+    "revision": "0afd4611372a94b6441e593ef57fa8d4b1306c65",
+    "version": "0.16.0.67"
+  }
+}
