@@ -54,7 +54,7 @@ cargo test
 ./scripts/fmt
 ```
 
-**scripts/fmt** runs the pinned nightly **rustfmt** described in **rustfmt.toml**. The stock example is **examples/versions/main.rs**. The smallest parse is **examples/minimal_usage/main.rs**:
+**scripts/fmt** runs the pinned nightly **rustfmt** described in **rustfmt.toml**. The stock example is **examples/versions/main.rs**. The smallest parse is **examples/minimal-usage/main.rs**:
 
 ```rust
 use clasp_rs::{
@@ -154,7 +154,7 @@ None defined at this time.
 
 Examples can be found in `examples/`:
 
-* `examples/minimal_usage/main.rs` — parses the process arguments and prints flags, options, values, and unused arguments;
+* `examples/minimal-usage/main.rs` — parses the process arguments and prints flags, options, values, and unused arguments;
 * `examples/versions/main.rs` — prints the crate name and version;
 
 

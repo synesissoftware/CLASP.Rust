@@ -12,6 +12,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "base-traits"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a898c03901e2234df4ec1d1681fb8aa0bac596b59d6791fc80eba03c0accc66a"
+dependencies = [
+ "bt-rs",
+]
+
+[[package]]
 name = "bt-rs"
 version = "0.0.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -21,8 +30,10 @@ checksum = "5b33a0644862185265eb4bee9b1679c1ae36f8258c000f3f482210acd95f7d70"
 name = "clasp-rs"
 version = "0.1.0"
 dependencies = [
+ "base-traits 0.2.0",
  "serde_json",
  "test_help-rs",
+ "woad",
 ]
 
 [[package]]
@@ -114,7 +125,7 @@ version = "0.2.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1fbd2a2dbea40fe948ff30aab06e73ecf79ff443ec01d38dc16ed9a28e1a4847"
 dependencies = [
- "base-traits",
+ "base-traits 0.1.5",
  "bt-rs",
 ]
 
@@ -123,6 +134,12 @@ name = "unicode-ident"
 version = "1.0.27"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a2c754d6c33795a1c324727428e5a7dedb5b06195f9890bdbcba760d3e246563"
+
+[[package]]
+name = "woad"
+version = "0.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bebce0bff69b0807c5dc7c645a9cde75ee993807e317e0489d6159d7b60c0421"
 
 [[package]]
 name = "zmij"
